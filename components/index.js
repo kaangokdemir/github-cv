@@ -29,7 +29,10 @@ function Contacts({ userJson }) {
         ) : null}
         {userJson.company ? (
           <li className="uk-align-center uk-margin-remove-bottom">
-            <span uk-icon="bolt"></span> Company: <b>{userJson.company}</b>
+            <span uk-icon="bolt"></span> Company:{" "}
+            <a href={`https://github.com/${userJson.company.substring(1)}`}>
+              <b>{userJson.company}</b>
+            </a>
           </li>
         ) : null}
       </ul>
